@@ -1,9 +1,15 @@
+import { Provider } from 'react-redux';
+import store from "./store";
 import './App.css';
+import Employees from './pages/Employees';
 
-function App() {
+const App = () => {
   return (
-    <h1>Employee Roaster App</h1>
-  );
+    <Provider store={store}>
+      <h1>Employees Roaster App</h1>
+      <Employees />
+    </Provider>
+  )
 }
 
 export default App;
