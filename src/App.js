@@ -1,15 +1,18 @@
-import { Provider } from 'react-redux';
-import store from "./store";
-import './App.css';
-import Employees from './pages/Employees';
+import { Provider } from "react-redux"
+import store from "./store"
+import "./styles.css"
+import Employees from "./pages/Employees"
 
 const App = () => {
   return (
     <Provider store={store}>
-      <h1>Employees Roaster App</h1>
-      <Employees />
+      <div className="container">
+        <div className="content">
+          <Employees />
+        </div>
+      </div>
     </Provider>
   )
 }
 
-export default App;
+export default App
