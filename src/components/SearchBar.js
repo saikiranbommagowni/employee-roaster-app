@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
-import { filterEmployees, setCurrentPage } from "../../slices/employeesSlice";
+import { filterEmployees, setCurrentPage } from "../slices/employeesSlice";
 import { useState } from "react";
+import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
     const [searchText, setSearchText] = useState('');
@@ -16,15 +17,16 @@ const SearchBar = () => {
         }
     }
     return (
-        <div className="search-bar">
+        <div className={styles.searchBar}>
             <input 
                 type="text"
                 placeholder="Search Employees"
                 value={searchText}
                 onChange={e => setSearchText(e.target.value)}
                 onKeyDown={handleKeyPress}
+                className={styles.searchInput}
             />
-            <button className="search-bar-button" onClick={handleSearch}>Search</button>
+            <button className={styles.searchButton} onClick={handleSearch}>Search</button>
         </div>
     )
 };

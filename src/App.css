@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Responsive design for mobile screens */
+  @media screen and (max-width: 575px) {
+    .content {
+      width: 90%;
+    }
+  }
+  

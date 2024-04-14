@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { setCurrentPage } from "../slices/employeesSlice"
 
-const usePagination = (sortedEmployees, itemsPerPage) => {
+const usePagination = (sortedEmployees, itemsPerPage, styles) => {
   const currentPage = useSelector((state) => state.employees.currentPage)
 
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ const usePagination = (sortedEmployees, itemsPerPage) => {
         <button
           key={i}
           onClick={() => handlePageClick(i)}
-          className={i === currentPage ? "active" : ""}
+          className={i === currentPage ? `${styles.active}` : ""}
         >
           {i}
         </button>

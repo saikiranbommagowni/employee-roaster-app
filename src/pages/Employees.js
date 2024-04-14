@@ -1,6 +1,6 @@
-import Header from "../components/Employees/Header";
-import SearchBar from "../components/Employees/SearchBar";
-import EmployeesTable from "../components/Employees/EmployeesTable";
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import EmployeesTable from "../components/EmployeesTable";
 
 const Employees = () => {
 
