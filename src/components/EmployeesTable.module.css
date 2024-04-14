@@ -51,10 +51,14 @@ th {
   th,
   td {
     padding: 8px;
+    text-align: center;
   }
 
   .fullName {
     flex-direction: column;
+    span {
+      padding-left: 0;
+    }
   }
 
   .pagination {
