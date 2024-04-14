@@ -4,7 +4,7 @@ import axios from "axios"
 export const fetchEmployees = createAsyncThunk(
   "employees/fetchEmployees",
   async () => {
-    const response = await axios.get("sample-data.json")
+    const response = await axios.get("/sample-data.json")
     return response.data
   }
 )
