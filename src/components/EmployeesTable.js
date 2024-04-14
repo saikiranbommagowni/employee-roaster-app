@@ -5,7 +5,7 @@ import sortIcon from "../assets/sortIcon.svg"
 import usePagination from "../hooks/usePagination"
 import useSorting from "../hooks/useSorting"
 import EmployeeModal from "./EmployeeModal"
-import styles from './EmployeesTable.module.css';
+import styles from "./EmployeesTable.module.css"
 
 const EmployeesTable = () => {
   const [selectedEmployee, setSelectedEmployee] = useState(null)
@@ -53,7 +53,7 @@ const EmployeesTable = () => {
       <span className={styles.itemsCount}>
         Showing {endIndex} of {totalEmployeesLength}
       </span>
-      <table>
+      <table data-testid="emp-table">
         <thead>
           <tr>
             {columns.map(({ accessor, header }) => (
@@ -74,7 +74,9 @@ const EmployeesTable = () => {
                     src={`https://ui-avatars.com/api/?name=${firstName} ${lastName}`}
                     alt={firstName}
                   />
-                  <span>{firstName} {lastName}</span>
+                  <span>
+                    {firstName} {lastName}
+                  </span>
                 </td>
                 <td>{contactNo}</td>
                 <td>{address}</td>
@@ -84,7 +86,7 @@ const EmployeesTable = () => {
         </tbody>
       </table>
 
-      <div className={styles.pagination}>
+      <div data-testid="emp-pagination" className={styles.pagination}>
         <button
           onClick={() => handlePageClick(currentPage - 1)}
           disabled={currentPage === 1}
@@ -99,7 +101,7 @@ const EmployeesTable = () => {
           Next
         </button>
       </div>
-      
+
       {selectedEmployee && (
         <EmployeeModal employee={selectedEmployee} onClose={handleCloseModal} />
       )}

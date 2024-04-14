@@ -1,11 +1,10 @@
-import Header from "../components/Header";
-import SearchBar from "../components/SearchBar";
-import EmployeesTable from "../components/EmployeesTable";
+import Header from "../components/Header"
+import SearchBar from "../components/SearchBar"
+import EmployeesTable from "../components/EmployeesTable"
 
 const Employees = () => {
-
   return (
-    <div className="dashboard">
+    <div data-testid="dashboard" className="dashboard">
       <Header />
       <SearchBar />
       <EmployeesTable />
@@ -13,5 +12,4 @@ const Employees = () => {
   )
 }
 
-
-export default Employees;
+export default Employees

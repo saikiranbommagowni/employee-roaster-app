@@ -1,4 +1,4 @@
-.companyName{
+.companyName {
   margin-bottom: 10px;
 }
 
@@ -10,7 +10,7 @@
 
 /* Responsive design for mobile screens */
 @media screen and (max-width: 575px) {
-  .companyName{
+  .companyName {
     text-align: center;
     margin-bottom: 5px;
   }

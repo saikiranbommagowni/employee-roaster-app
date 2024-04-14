@@ -17,7 +17,7 @@ const EmployeeModal = ({ employee, onClose }) => {
     }
   }, [onClose])
   return (
-    <div className={styles.modal}>
+    <div data-testid="emp-modal" className={styles.modal}>
       <div ref={modalRef} className={styles.modalDialog}>
         <div className={styles.modalContent}>
           <div className={styles.modalHeader}>
